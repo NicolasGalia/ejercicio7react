@@ -1,22 +1,33 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Row } from 'react-bootstrap';
 import Avatar from './Avatar'
 
-const RowPersonaje = () => {
+const RowPersonaje = ({id, fullName, title, department, pic}) => {
     return (
-        <Card>
-      <Card.Body>
-        <Avatar></Avatar>
+     
+        <Card style={{ width: '18rem' }}>
+          <Row>
+      <Card.Header>
+        <Avatar pic={pic}></Avatar>
+        </Card.Header>
+        <Card.Body>
         <Card.Title>
-
+{
+  fullName
+}
         </Card.Title>
         <Card.Text>
-          
+  {
+    title
+  }        
         </Card.Text>
+        </Card.Body>
         <Card.Footer>
-
+{
+  department
+}
         </Card.Footer>
-      </Card.Body>
+        </Row>
     </Card>
     );
 };
